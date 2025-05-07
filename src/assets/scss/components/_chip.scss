@@ -1,0 +1,20 @@
+.p-chip {
+  border-radius: 0.25rem;
+  border: 1px solid var(--hr-primary-light-200);
+  background: var(--hr-primary-light-50);
+  display: flex;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  .pi-chip-remove-icon {
+    margin: 0;
+    margin-inline-start: 5px;
+    color: var(--hr-error-dark-800);
+  }
+  .p-chip-text {
+    color: var(--hr-primary-dark-800);
+  }
+}

@@ -1,0 +1,29 @@
+@import 'mixins';
+
+.hr-radius-none {
+  @include border-radius(0rem);
+}
+
+.hr-radius-xs {
+  @include border-radius(0.125rem);
+}
+
+.hr-radius-sm {
+  @include border-radius(0.25rem);
+}
+
+.hr-radius-md {
+  @include border-radius(0.5rem);
+}
+
+.hr-radius-lg {
+  @include border-radius(1rem);
+}
+
+.hr-radius-xl {
+  @include border-radius(1.5rem);
+}
+
+.hr-radius-full {
+  @include border-radius(9999px);
+}

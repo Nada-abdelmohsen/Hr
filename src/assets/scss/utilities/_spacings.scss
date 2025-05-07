@@ -1,0 +1,104 @@
+$spacer: 1rem !default;
+
+$spacers: (
+  'none': 0,
+  'xss': $spacer * 0.125,
+  'xs': $spacer * 0.25,
+  'sm': $spacer * 0.375,
+  'md': $spacer * 0.5,
+  'lg': $spacer * 0.75,
+  'xl': $spacer * 1,
+  '2xl': $spacer * 1.25,
+  '3xl': $spacer * 1.5,
+  '4xl': $spacer * 2,
+  '5xl': $spacer * 2.5,
+  '6xl': $spacer * 3,
+  '7xl': $spacer * 4,
+  '8xl': $spacer * 5,
+  '9xl': $spacer * 6,
+  '10xl': $spacer * 8,
+  '11xl': $spacer * 10,
+  auto: auto
+) !default;
+
+$sides: (top, bottom, left, right);
+
+$axises: (x, y);
+
+@each $key, $value in $spacers {
+  .hr-m-#{$key} {
+    margin: #{$value} !important;
+  }
+
+  @if $key !=auto {
+    .hr-p-#{$key} {
+      padding: #{$value} !important;
+    }
+  }
+}
+
+@each $key, $value in $spacers {
+  @each $side in $sides {
+    @if $side ==left {
+      .hr-me-#{$key} {
+        margin-inline-end: #{$value} !important;
+      }
+
+      @if $key !=auto {
+        .hr-pe-#{$key} {
+          padding-inline-end: #{$value} !important;
+        }
+      }
+    } @else if $side ==right {
+      .hr-ms-#{$key} {
+        margin-inline-start: #{$value} !important;
+      }
+
+      @if $key !=auto {
+        .hr-ps-#{$key} {
+          padding-inline-start: #{$value} !important;
+        }
+      }
+    } @else {
+      .hr-m#{str-slice($side, 0, 1)}-#{$key} {
+        margin-#{$side}: #{$value} !important;
+      }
+
+      @if $key !=auto {
+        .hr-p#{str-slice($side, 0, 1)}-#{$key} {
+          padding-#{$side}: #{$value} !important;
+        }
+      }
+    }
+  }
+}
+
+@each $key, $value in $spacers {
+  @each $axis in $axises {
+    @if $axis ==x {
+      .hr-m#{$axis}-#{$key} {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+
+      @if $key !=auto {
+        .hr-p#{$axis}-#{$key} {
+          padding-left: #{$value} !important;
+          padding-right: #{$value} !important;
+        }
+      }
+    } @else if $axis ==y {
+      .hr-m#{$axis}-#{$key} {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+
+      @if $key !=auto {
+        .hr-p#{$axis}-#{$key} {
+          padding-top: #{$value} !important;
+          padding-bottom: #{$value} !important;
+        }
+      }
+    }
+  }
+}

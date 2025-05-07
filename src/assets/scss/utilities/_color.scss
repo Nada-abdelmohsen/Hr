@@ -1,0 +1,183 @@
+:root {
+  --hr-neutral-light-0: #ffffff;
+  --hr-neutral-light-25: #fcfcfd;
+  --hr-neutral-light-50: #f9fafb;
+  --hr-neutral-light-100: #f3f4f6;
+  --hr-neutral-light-200: #e5e7eb;
+  --hr-neutral-light-250: #ededed;
+  --hr-neutral-light-250: #f4f4f4;
+  --hr-neutral-light-300: #ffffff4d;
+  --hr-neutral-light-350: #ffffff1a;
+
+  --hr-neutral-light-250: #e6ecec;
+
+  --hr-neutral-medium-300: #d2d6db;
+  --hr-neutral-medium-350: #868686;
+  --hr-neutral-medium-400: #9da4ae;
+  --hr-neutral-medium-450: #919191;
+  --hr-neutral-medium-500: #6c737f;
+  --hr-neutral-medium-550: #6b7280;
+  --hr-neutral-medium-650: #969696;
+  --hr-neutral-medium-600: #4d5761;
+  --hr-neutral-medium-700: #384250;
+  --hr-neutral-medium-750: #5f5f5f;
+  --hr-neutral-medium-750: #59595c;
+  --hr-neutral-medium-800: #64748b;
+  --hr-neutral-medium-850: #bcbaba;
+  --hr-neutral-medium-900: #868686;
+  --hr-neutral-medium-950: #F3FCF64D;
+
+  --hr-neutral-dark-800: #1f2a37;
+  --hr-neutral-dark-850: #161616;
+  --hr-neutral-dark-900: #111927;
+  --hr-neutral-dark-950: #0d121c;
+  --hr-neutral-dark-1000: #000000;
+  --hr-neutral-dark-1001: #050505;
+
+  --hr-primary-light-25: #f6fef9;
+  --hr-primary-light-50: #ecfdf3;
+  --hr-primary-light-100: #dcfae6;
+  --hr-primary-light-200: #abefc6;
+  --hr-primary-medium-300: #75e0a7;
+  --hr-primary-medium-400: #47cd89;
+  --hr-primary-medium-500: #17b26a;
+  --hr-primary-medium-600: #079455;
+  --hr-primary-medium-700: #067647;
+  --hr-primary-dark-800: #085d3a;
+  --hr-primary-dark-900: #074d31;
+  --hr-primary-dark-950: #053321;
+
+  --hr-secondary-light-25: #fffef7;
+  --hr-secondary-light-50: #fffef2;
+  --hr-secondary-light-100: #fffce6;
+  --hr-secondary--light-200: #fcf3bd;
+  --hr-secondary-medium-300: #fae996;
+  --hr-secondary-medium-400: #f7d54d;
+  --hr-secondary-medium-500: #f5bd02;
+  --hr-secondary-medium-600: #dba102;
+  --hr-secondary-medium-700: #b87b02;
+  --hr-secondary-dark-800: #945c01;
+  --hr-secondary-dark-900: #6e3c00;
+  --hr-secondary-dark-950: #472400;
+
+  --hr-lavender-light-25: #fefcff;
+  --hr-lavender-light-50: #f9f5fa;
+  --hr-lavender-light-100: #f2e9f5;
+  --hr-lavender-light-200: #e1cce8;
+  --hr-lavender-medium-300: #ccadd9;
+  --hr-lavender-medium-400: #a57bba;
+  --hr-lavender-medium-500: #80519f;
+  --hr-lavender-medium-600: #6d428f;
+  --hr-lavender-medium-700: #532d75;
+  --hr-lavender-dark-800: #3d1d5e;
+  --hr-lavender-dark-900: #281047;
+  --hr-lavender-dark-950: #16072e;
+
+  --hr-error-light-25: #fef3f2;
+  --hr-error-light-50: #fef3f2;
+  --hr-error-light-100: #fee4e2;
+  --hr-error-light-200: #fecdca;
+  --hr-error-medium-300: #fda29b;
+  --hr-error-medium-400: #f97066;
+  --hr-error-medium-500: #f04438;
+  --hr-error-medium-550: #ff0000;
+  --hr-error-medium-600: #d92d20;
+  --hr-error-medium-700: #b42318;
+  --hr-error-dark-800: #912018;
+  --hr-error-dark-900: #7a271a;
+  --hr-error-dark-950: #55160c;
+
+  --hr-warning-light-25: #fffcf5;
+  --hr-warning-light-50: #fffaeb;
+  --hr-warning-light-100: #fef0c7;
+  --hr-warning-light-200: #fedf89;
+  --hr-warning-medium-300: #fec84b;
+  --hr-warning-medium-400: #fdb022;
+  --hr-warning-medium-500: #f79009;
+  --hr-warning-medium-600: #dc6803;
+  --hr-warning-medium-700: #b54708;
+  --hr-warning-dark-800: #93370d;
+  --hr-warning-dark-900: #7a2e0e;
+  --hr-warning-dark-950: #4e1d09;
+
+  --hr-info-light-25: #f5faff;
+  --hr-info-light-50: #ecfdf3;
+  --hr-info-light-75: #eff8ff;
+  --hr-info-light-100: #d1e9ff;
+  --hr-info-light-200: #b2ddff;
+  --hr-info-medium-300: #84caff;
+  --hr-info-medium-400: #53b1fd;
+  --hr-info-medium-500: #2e90fa;
+  --hr-info-medium-600: #1570ef;
+  --hr-info-medium-700: #175cd3;
+  --hr-info-dark-800: #1849a9;
+  --hr-info-dark-900: #194185;
+  --hr-info-dark-950: #102a56;
+
+  --hr-success-light-25: #f7fdf9;
+  --hr-success-light-100: #f3fcf6;
+  --hr-success-light-200: #dff6e7;
+  --hr-success-medium-300: #b8eacb;
+  --hr-success-medium-400: #88d8ad;
+  --hr-success-medium-500: #54c08a;
+  --hr-success-medium-600: #25935f;
+  --hr-success-medium-700: #1b8354;
+  --hr-success-dark-800: #166a45;
+  --hr-success-dark-900: #14573a;
+  --hr-success-dark-950: #104631;
+
+  --hr-green-gradient-light-25: linear-gradient(90deg, #1b8354, #25935f);
+  --hr-green-gradient-light-100: linear-gradient(45deg, #166a45, #1b8354);
+  --hr-green-gradient-medium-200: linear-gradient(45deg, #092a1e, #1b8354);
+  --hr-green-gradient-medium-300: linear-gradient(90deg, #14573a, #1b8354);
+  --hr-green-gradient-dark-400: linear-gradient(26.5deg, #14573a, #166a45);
+  --hr-green-gradient-dark-500: linear-gradient(45deg, #104631, #1b8354);
+
+
+}
+
+$categories: (
+  'neutral-light': (0, 25, 50, 100, 200, 250, 300, 350),
+  'neutral-medium': (300, 400, 450, 475, 500, 550, 600, 700, 750, 800, 850),
+  'neutral-dark': (800, 850, 900, 950, 1000),
+  'primary-light': (25, 50, 100, 200),
+  'primary-medium': (300, 400, 500, 600, 700),
+  'primary-dark': (800, 900, 950),
+  'secondary-light': (25, 50, 100, 200),
+  'secondary-medium': (300, 400, 500, 600, 700),
+  'secondary-dark': (800, 900, 950),
+  'lavender-light': (25, 50, 100, 200),
+  'lavender-medium': (300, 400, 500, 600, 700),
+  'lavender-dark': (800, 900, 950),
+  'error-light': (25, 50, 100, 200),
+  'error-medium': (300, 400, 500, 550, 600, 700),
+  'error-dark': (800, 900, 950),
+  'warning-light': (25, 50, 100, 200),
+  'warning-medium': (300, 400, 500, 600, 700),
+  'warning-dark': (800, 900, 950),
+  'info-light': (25, 50, 75, 100, 200),
+  'info-medium': (300, 400, 500, 600, 700),
+  'info-dark': (800, 900, 950),
+  'success-light': (25, 100, 200),
+  'success-medium': (300, 400, 500, 600, 700),
+  'success-dark': (800, 900, 950)
+);
+
+
+@each $category, $shades in $categories {
+  @each $shade in $shades {
+    $var-name: --hr-#{$category}-#{$shade};
+
+    .hr-#{$category}-#{$shade} {
+      color: var(#{$var-name}) !important;
+    }
+
+    .hr-bg-#{$category}-#{$shade} {
+      background-color: var(#{$var-name});
+    }
+
+    .hr-br-#{$category}-#{$shade} {
+      border-color: var(#{$var-name}) !important;
+    }
+  }
+}

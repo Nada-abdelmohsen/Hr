@@ -1,0 +1,71 @@
+@import '../utilities/mixins';
+
+p-checkbox + label .label-required {
+  color: var(--hr-error-medium-700);
+  margin-inline-end: 0.25rem;
+}
+
+.p-checkbox {
+  &:dir(rtl) {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+  .p-checkbox-box {
+    @include border(1px, solid, var(--hr-neutral-medium-500), 2px);
+    box-shadow: none !important;
+    width: 24px;
+    height: 24px;
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include mobile {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.p-disabled {
+      @include border(1.5px, solid, var(--hr-neutral-medium-450), 3px);
+      cursor: not-allowed;
+
+      &.p-highlight {
+        background-color: var(--hr-neutral-medium-450) !important;
+        border-color: var(--hr-neutral-medium-450) !important;
+
+        .p-checkbox-icon {
+          color: var(--hr-neutral-light-0) !important;
+          background-image: url(../../icons/check-icon.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .p-checkbox-icon {
+        color: var(--hr-neutral-light-500) !important;
+        background-image: url(../../icons/check-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &.p-highlight {
+      background-color: var(--hr-success-medium-700);
+      @include border(1px, solid, var(--hr-success-medium-700), 2px);
+    }
+
+    .p-checkbox-icon {
+      height: 10px;
+      flex-shrink: 0;
+      background-image: url(../../icons/check-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .pi.pi-check {
+      font-weight: 900 !important;
+      transform: scale(1.5) !important;
+    }
+  }
+}

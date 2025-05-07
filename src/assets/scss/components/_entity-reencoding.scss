@@ -1,0 +1,47 @@
+@use '../utilities/typography' as *;
+@use '../utilities/color' as *;
+* {
+  padding: 0;
+  margin: 0;
+}
+.entity-information {
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+  &__info-section {
+    background-color: var(--hr-neutral-light-50);
+    border: 1px solid var(--hr-neutral-medium-300);
+    border-radius: 8px;
+    padding: 0.75rem;
+    &__imglayout {
+      background-color: var(--hr-primary-light-50);
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+    }
+    &__info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: var(--hr-neutral-dark-800);
+      &__title {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      &__subtitle {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+  }
+}

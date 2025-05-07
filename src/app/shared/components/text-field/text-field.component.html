@@ -1,0 +1,101 @@
+<div class="input-field-wrapper">
+  @if (label) {
+    <label [for]="id()">
+      @if (control.hasValidator(Validators.required)) {
+        <span class="label-required">*</span>
+      }
+      <span [ngClass]="labelClasses">{{ label }}</span>
+    </label>
+  }
+
+  <div class="input-with-extension flex w-full align-items-center">
+    @if (icon) {
+      <div class="input-extension bg-transparent">
+        <i [class]="icon"></i>
+      </div>
+    } @else if (leadingTemplate) {
+      <div class="input-extension">
+        <ng-container *ngTemplateOutlet="leadingTemplate"></ng-container>
+      </div>
+    }
+
+    <div class="postfix-container w-full align-items-center">
+      @if (postfix || postfixIcon) {
+        @if (postfix) {
+          <div class="input-extension postfix-label ltr-text">
+            {{ postfix }}
+          </div>
+        }
+        @if (postfixIcon) {
+          <div class="input-extension postfix-label ltr-text">
+            <img [src]="postfixIcon" class="mx-2" [style]="{ width: postfixIconWidth }" />
+          </div>
+        }
+      }
+
+      <ng-container *ngTemplateOutlet="inputField"></ng-container>
+    </div>
+
+    @if (trailingTemplate) {
+      <div class="input-extension">
+        <ng-container *ngTemplateOutlet="trailingTemplate"></ng-container>
+      </div>
+    }
+  </div>
+
+  <ng-template #inputField>
+    @if (isNumber || isDecimal) {
+      <p-inputNumber
+        [maxlength]="maxlength"
+        [inputId]="id().toString()"
+        [max]="maxValue"
+        [min]="minValue"
+        [useGrouping]="false"
+        [formControl]="control"
+        [placeholder]="placeholder"
+        [maxFractionDigits]="isDecimal ? 2 : 0"
+      />
+    } @else {
+      <input
+        #inputText
+        pInputText
+        [autofocus]="autoFocus"
+        type="text"
+        [id]="id()"
+        [value]="value"
+        [disabled]="control.disabled || isDisabled"
+        [attr.placeholder]="placeholder"
+        [attr.maxLength]="maxlength"
+        (input)="onInputChange(inputText?.value ?? '')"
+        (blur)="onBlur($event); onTouched()"
+      />
+      @if (value && showClearButton) {
+        <a
+          #clearButton
+          class="input-clear flex cursor-pointer p-2"
+          (click)="onClear.emit(); inputText?.focus()"
+          tabindex="-1"
+        >
+          <i class="pi pi-times"></i>
+        </a>
+      }
+    }
+  </ng-template>
+</div>
+
+@if (control.invalid && control.touched) {
+  <div class="field-errors mt-2 flex flex-column gap-2">
+    @for (error of control.errors | keyvalue; track error.key) {
+      @if (error.key !== errorType) {
+        <small class="field-error flex gap-2">
+          <div>
+            <i class="pi pi-exclamation-circle"></i>
+          </div>
+          <div>
+            {{ getErrorMessage(error.key, error.value) | translate: error.value }}
+          </div>
+        </small>
+      }
+    }
+  </div>
+}

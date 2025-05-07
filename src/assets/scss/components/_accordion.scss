@@ -1,0 +1,13 @@
+:dir(ltr) .p-accordion-toggle-icon {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+:dir(rtl) .p-accordion-toggle-icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.p-accordion-toggle-icon {
+  order: 2;
+}

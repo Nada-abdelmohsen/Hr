@@ -1,0 +1,206 @@
+@use '../utilities/typography';
+@use '../utilities/mixins';
+
+$buttons: (
+  'default': (
+    'neutral': (
+      'color': var(--hr-neutral-light-0),
+      'background': var(--hr-neutral-dark-950),
+      'hover': var(--hr-neutral-dark-800),
+      'active': var(--hr-neutral-medium-600),
+      'disabled': var(--hr-neutral-light-200)
+    ),
+    'primary': (
+      'color': var(--hr-neutral-light-0),
+      'background': var(--hr-success-medium-700),
+      'hover': var(--hr-success-dark-800),
+      'active': var(--hr-success-dark-950),
+      'disabled': var(--hr-neutral-light-200)
+    ),
+    'secondary': (
+      'color': var(--hr-neutral-dark-850),
+      'background': var(--hr-neutral-light-50),
+      'hover': var(--hr-neutral-light-200),
+      'active': var(--hr-neutral-light-200),
+      'disabled': var(--hr-neutral-light-200)
+    ),
+    'outlined': (
+      'color': var(--hr-neutral-dark-850),
+      'background': transparent,
+      'hover': var(--hr-neutral-light-50),
+      'active': var(--hr-neutral-light-200),
+      'border': var(--hr-neutral-medium-300)
+    ),
+    'subtle': (
+      'color': var(--hr-neutral-dark-850),
+      'background': transparent,
+      'hover': var(--hr-neutral-light-50),
+      'active': var(--hr-neutral-light-200)
+    ),
+    'transparent': (
+      'color': var(--hr-neutral-dark-850),
+      'background': transparent,
+      'hover': transparent,
+      'active': transparent,
+      'hoverColor': var(--hr-success-dark-800),
+      'activeColor': var(--hr-success-dark-950)
+    )
+  ),
+  'danger': (
+    'primary': (
+      'color': var(--hr-neutral-light-0),
+      'background': var(--hr-error-medium-600),
+      'hover': var(--hr-error-medium-700),
+      'active': var(--hr-error-dark-900),
+      'disabled': var(--hr-neutral-light-200)
+    ),
+    'secondary': (
+      'color': var(--hr-error-medium-700),
+      'background': var(--hr-error-light-25),
+      'hover': var(--hr-error-light-100),
+      'active': var(--hr-error-light-200),
+      'disabled': var(--hr-neutral-light-200)
+    ),
+    'outlined': (
+      'color': var(--hr-error-medium-700),
+      'background': transparent,
+      'hover': var(--hr-error-light-100),
+      'active': var(--hr-error-light-200),
+      'border': var(--hr-error-light-200)
+    ),
+    'subtle': (
+      'color': var(--hr-error-medium-700),
+      'background': transparent,
+      'hover': var(--hr-error-light-100),
+      'active': var(--hr-error-light-200)
+    ),
+    'transparent': (
+      'color': var(--hr-error-medium-600),
+      'background': transparent,
+      'hover': transparent,
+      'active': transparent,
+      'hoverColor': var(--hr-error-medium-700),
+      'activeColor': var(--hr-error-dark-900)
+    )
+  )
+);
+
+@mixin button-base() {
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  box-shadow: none;
+  font-weight: var(--hr-font-medium);
+  @include typography.font-style('text-md');
+
+  .p-button-label {
+    font-weight: var(--hr-font-medium);
+  }
+
+  &:dir(rtl) {
+    .p-button-icon {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    .p-button-icon-right {
+      margin-right: 0.5rem;
+      margin-left: 0;
+    }
+  }
+
+  &:not(:has(.p-button-label)) {
+    .p-button-icon {
+      margin: 0;
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+.row-reverse {
+  button {
+    flex-direction: row-reverse;
+  }
+}
+
+.hr-button {
+  width: inherit;
+
+  button {
+    //white-space: nowrap;
+    padding: 0.44rem 1rem;
+    @include button-base();
+    width: inherit;
+    gap: 0.5rem;
+  }
+
+  @each $button, $props in $buttons {
+    @each $key, $value in $props {
+      &.hr-button--#{$key}.hr-button--#{$button} {
+        button {
+          background: map-get($value, 'background');
+          color: map-get($value, 'color');
+
+          @if map-has-key($value, 'border') {
+            border: 1px solid map-get($value, 'border');
+          }
+
+          &:hover {
+            background: map-get($value, 'hover');
+
+            @if map-has-key($value, 'hoverColor') {
+              color: map-get($value, 'hoverColor');
+            }
+          }
+
+          &:active {
+            background: map-get($value, 'active');
+
+            @if map-has-key($value, 'activeColor') {
+              color: map-get($value, 'activeColor');
+            }
+          }
+
+          &:focus {
+            $outline-width: 1px;
+            outline: $outline-width solid var(--hr-neutral-light-0);
+            outline-offset: -$outline-width - 2px;
+
+            border: 1px solid var(--hr-neutral-dark-850);
+          }
+
+          &:disabled {
+            color: var(--hr-neutral-medium-400);
+
+            @if map-has-key($value, 'disabled') {
+              background: map-get($value, 'disabled');
+            }
+
+            @if map-has-key($value, 'border') {
+              border: 1px solid var(--hr-neutral-light-200);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixins.tablet {
+  .hr-button {
+    button {
+      padding: 6px 12px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .hr-button {
+    button {
+      padding: 3px 8px;
+    }
+  }
+}

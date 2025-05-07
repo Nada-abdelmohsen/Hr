@@ -1,0 +1,107 @@
+
+// components
+@use 'components/breadcrumb';
+@use 'components/button';
+@use 'components/split-button';
+@use 'components/calender';
+@use 'components/checkbox';
+@use 'components/drawer';
+@use 'components/dropdown';
+@use 'components/dynamic-accordion';
+@use 'components/fileupload';
+@use 'components/input-group';
+@use 'components/input-switch';
+@use 'components/menu';
+@use 'components/message';
+@use 'components/modal';
+@use 'components/radio-button';
+@use 'components/steps';
+@use 'components/table';
+@use 'components/tabview';
+@use 'components/tag';
+@use 'components/text-area';
+@use 'components/text-field';
+@use 'components/approval-dropdown';
+@use 'components/stepper';
+@use 'components/accordion';
+@use 'components/multiselect';
+@use 'components/chip';
+@use 'components/city-region-info';
+@use 'components/summary-updates';
+@use 'components/link';
+
+// pages
+// @use 'pages/update-data.scss';
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--hr-font-family);
+  }
+}
+
+@layer hr {
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+
+  html {
+    line-height: inherit;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--hr-font-family);
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+
+  .p-component,
+  .p-inputtext {
+    font-family: var(--hr-font-family);
+  }
+
+  .label-required {
+    color: var(--hr-error-medium-700);
+    margin-inline-end: 0.25rem;
+  }
+
+  .bold-hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+    width: 5%;
+    margin: auto;
+  }
+}
+
+
+.spreated-dash {
+  background-color: #6b7280;
+  border: none;
+  height: 2px;
+  width: 10px;
+}
+:root {
+  --black: #000;
+  --white: #fff;
+}

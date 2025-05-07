@@ -1,0 +1,51 @@
+p-calendar > span {
+  width: 100%;
+}
+
+.p-datepicker {
+  color: var(--hr-neutral-dark-850);
+  .p-datepicker-header {
+    border-bottom: none;
+    .p-datepicker-title {
+      order: 0;
+      margin-left: 0;
+      margin-right: auto;
+      &:dir(rtl) {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+    .p-datepicker-prev {
+      order: 1;
+      &:dir(rtl) {
+        transform: scaleX(-1);
+      }
+    }
+    .p-disabled,
+    .p-component:disabled {
+      opacity: 1;
+      color: var(--hr-neutral-medium-500);
+    }
+    .p-datepicker-next {
+      order: 2;
+      &:dir(rtl) {
+        transform: scaleX(-1);
+      }
+    }
+  }
+  table th {
+    color: var(--hr-neutral-medium-500);
+    font-weight: 400;
+  }
+  table td > span.p-highlight {
+    background: var(--hr-success-medium-700);
+    color: var(--hr-neutral-light-0);
+  }
+
+  table td.p-datepicker-today > span {
+    border: 2px solid var(--hr-success-medium-700);
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--hr-success-medium-700);
+  }
+}

@@ -1,0 +1,58 @@
+@use 'utilities/variables' as vars;
+@use 'utilities/hr-icons';
+@font-face {
+  font-family: vars.$hr-font-family;
+  src:
+    url('../fonts/ibm-plex/woff2/IBMPlexSansArabic-Regular.woff2') format('woff2'),
+    url('../fonts/ibm-plex/woff/IBMPlexSansArabic-Regular.woff') format('woff'),
+    url('../fonts/ibm-plex/ttf/IBMPlexSansArabic-Regular.ttf') format('truetype'),
+    url('../fonts/ibm-plex/otf/IBMPlexSansArabic-Regular.otf') format('opentype'),
+    url('../fonts/ibm-plex/eot/IBMPlexSansArabic-Regular.eot') format('embedded-opentype');
+
+  font-style: normal;
+  font-display: swap;
+  font-weight: map-get(vars.$font-weights, 'regular');
+}
+
+@font-face {
+  font-family: vars.$hr-font-family;
+  src:
+    url('../fonts/ibm-plex/woff2/IBMPlexSansArabic-Medium.woff2') format('woff2'),
+    url('../fonts/ibm-plex/woff/IBMPlexSansArabic-Medium.woff') format('woff'),
+    url('../fonts/ibm-plex/ttf/IBMPlexSansArabic-Medium.ttf') format('truetype'),
+    url('../fonts/ibm-plex/otf/IBMPlexSansArabic-Medium.otf') format('opentype'),
+    url('../fonts/ibm-plex/eot/IBMPlexSansArabic-Medium.eot') format('embedded-opentype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: map-get(vars.$font-weights, 'medium');
+}
+
+@font-face {
+  font-family: vars.$hr-font-family;
+  src:
+    url('../fonts/ibm-plex/woff2/IBMPlexSansArabic-SemiBold.woff2') format('woff2'),
+    url('../fonts/ibm-plex/woff/IBMPlexSansArabic-SemiBold.woff') format('woff'),
+    url('../fonts/ibm-plex/ttf/IBMPlexSansArabic-SemiBold.ttf') format('truetype'),
+    url('../fonts/ibm-plex/otf/IBMPlexSansArabic-SemiBold.otf') format('opentype'),
+    url('../fonts/ibm-plex/eot/IBMPlexSansArabic-SemiBold.eot') format('embedded-opentype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: map-get(vars.$font-weights, 'semibold');
+}
+
+@font-face {
+  font-family: vars.$hr-font-family;
+  src:
+    url('../fonts/ibm-plex/woff2/IBMPlexSansArabic-Bold.woff2') format('woff2'),
+    url('../fonts/ibm-plex/woff/IBMPlexSansArabic-Bold.woff') format('woff'),
+    url('../fonts/ibm-plex/ttf/IBMPlexSansArabic-Bold.ttf') format('truetype'),
+    url('../fonts/ibm-plex/otf/IBMPlexSansArabic-Bold.otf') format('opentype'),
+    url('../fonts/ibm-plex/eot/IBMPlexSansArabic-Bold.eot') format('embedded-opentype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: map-get(vars.$font-weights, 'bold');
+}
+
+
+
+

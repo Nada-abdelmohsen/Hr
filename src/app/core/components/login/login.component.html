@@ -1,0 +1,46 @@
+<!-- <hr-header/> -->
+<div class="container m-auto flex flex-row flex-wrap" style="min-height: 100vh">
+  <!-- Start Left Section  -->
+  <div class="lg:col-4 md:col-12" style="height: 100vh">
+    <img
+      class="image"
+      src="/assets/images/login.jpg"
+      style="width: 100%; height: 100%; object-fit: cover"
+    />
+  </div>
+  <!-- End Left Section  -->
+
+  <!-- Start Right Section  -->
+  <div class="form-container p-3">
+  <div class="lg:col-8 md:col-12">
+
+    <h3>HR System</h3>
+    <h3>{{ "WELCOME" | translate }}</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+          <hr-text-field
+            [placeholder]="'example@gmail.com'"
+            [label]="'Email'"
+            formControlName="email"
+
+          />
+
+          <hr-text-field
+            [placeholder]="'....'"
+            [label]="'Password'"
+            formControlName="password"
+          />
+
+          <div>
+            <input type="checkbox" name="Remember me" />
+            <small>Forget password !</small>
+          </div>
+
+          <button pButton>Click</button>
+
+    </form>
+
+        </div>
+      </div>
+  </div>
+<!-- End Right Section  -->

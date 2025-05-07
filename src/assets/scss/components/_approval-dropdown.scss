@@ -1,0 +1,79 @@
+.approval-dropdown {
+  .p-dropdown {
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--hr-success-medium-700);
+    color: white;
+  }
+
+  .p-element.selected {
+    .p-dropdown {
+      border: none;
+      outline: none;
+      background-color: var(--hr-neutral-light-50);
+      color: black;
+    }
+
+    .p-dropdown .p-dropdown-trigger-icon {
+      color: black;
+    }
+    .p-dropdown-label {
+      color: black;
+    }
+
+    .p-dropdown .p-dropdown-trigger::before {
+      background-color: black;
+    }
+  }
+
+  .p-dropdown-label {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .p-dropdown-label::before {
+    content: 'AB';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: var(--hr-neutral-light-50);
+    color: var(--hr-neutral-dark-850);
+    margin-inline: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+  }
+
+  .p-dropdown .p-dropdown-trigger::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 32px;
+    background-color: white;
+    margin-inline: 8px;
+  }
+
+  .p-dropdown .p-dropdown-trigger-icon {
+    color: white;
+  }
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item .custom-dropdown-item {
+  padding: 16px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: right;
+}

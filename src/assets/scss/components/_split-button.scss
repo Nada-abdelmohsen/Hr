@@ -1,0 +1,56 @@
+.p-splitbutton {
+  background-color: var(--hr-success-medium-700);
+  height: 40px;
+  button {
+    margin-block: 4px;
+  }
+  .p-splitbutton-defaultbutton {
+    border-left: 1px solid var(--hr-neutral-light-0);
+    border-right: unset;
+  }
+}
+.p-tieredmenu {
+  width: 228px;
+  border-radius: 8px;
+  .p-menuitem-link {
+    gap: 8px;
+    padding: 8px;
+    span {
+      color: var(--hr-neutral-dark-850);
+    }
+    span:last-child {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .p-menuitem-link:hover {
+    background-color: var(--hr-neutral-light-50);
+    border-radius: 5px;
+  }
+  .p-menuitem.approved,
+  .p-menuitem.rejected {
+    span {
+      font-size: 0.875rem;
+    }
+  }
+  .p-menuitem.approved {
+    span {
+      color: var(--hr-success-medium-700);
+    }
+  }
+  .p-menuitem.rejected {
+    span {
+      color: var(--hr-error-medium-700);
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .p-splitbutton {
+    .p-splitbutton-defaultbutton {
+      border-right: 1px solid var(--hr-neutral-light-0);
+      border-left: unset;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.hr-tables-tabview .p-tabview-panels {
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+  }
+}
+.p-tabview {
+  padding: 0 !important;
+  .p-tabview-nav {
+    border-width: 0 0 3px 0;
+    &-btn {
+      display: none;
+    }
+    li .p-tabview-nav-link {
+      color: var(--hr-neutral-medium-700);
+      font-weight: 500;
+    }
+    li.p-highlight .p-tabview-nav-link {
+      color: var(--hr-neutral-dark-850);
+      font-weight: 700;
+      border-color: var(--hr-success-medium-700);
+      border-bottom-width: 3px;
+    }
+    li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+      border-bottom-width: 3px;
+    }
+  }
+}

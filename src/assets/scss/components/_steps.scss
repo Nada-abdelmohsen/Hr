@@ -1,0 +1,76 @@
+.p-steps {
+  margin-block: 16px;
+  padding-block: 12px;
+  ul {
+    width: 50%;
+    margin-inline: auto;
+  }
+  .p-steps-item {
+    flex: 1;
+    justify-content: flex-start;
+    .p-menuitem-link {
+      gap: 0;
+      align-items: start;
+    }
+    .p-steps-number {
+      position: relative;
+      font-weight: 500;
+      background: var(--hr-neutral-light-0);
+      color: var(--hr-neutral-medium-300);
+      border: 2px solid var(--hr-neutral-medium-300);
+      line-height: 24px;
+      font-size: 16px;
+    }
+    .p-steps-title {
+      color: var(--hr-neutral-medium-500);
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+  }
+  .p-steps-item:last-child {
+    justify-content: flex-end;
+    flex: 0;
+  }
+
+  .p-steps-item.p-highlight {
+    .p-steps-number {
+      background: var(--hr-neutral-light-0);
+      color: var(--hr-success-medium-700);
+      border: 2px solid var(--hr-success-medium-700);
+    }
+
+    .p-steps-title {
+      color: var(--hr-neutral-dark-800);
+    }
+  }
+
+  .p-steps-item.p-disabled {
+    opacity: 1;
+  }
+
+  .p-steps-item:before {
+    border-top-width: 2px;
+    margin-top: calc(-1rem + 1px);
+  }
+  .p-steps-item:last-child::before {
+    width: 0%;
+    transform: translateX(3rem);
+  }
+}
+
+.p-steps-item:has(~ .p-highlight)::before {
+  border: 1px solid var(--hr-success-medium-700);
+}
+.p-steps-item:has(~ .p-highlight) {
+  .p-steps-number {
+    border: 1px solid var(--hr-success-medium-700);
+    color: var(--hr-neutral-light-0);
+    text-indent: -9999px;
+    background-color: var(--hr-success-medium-700);
+    background-image: url('../../images/tick-02.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

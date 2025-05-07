@@ -1,0 +1,23 @@
+.text-danger-medium {
+  color: var(--hr-error-medium-600) !important;
+  font-weight: 400 !important;
+  text-decoration: line-through;
+}
+.status-delete {
+  width: 3rem;
+  padding: 0.2rem 0.7rem;
+  background-color: var(--hr-error-light-25);
+  color: var(--hr-error-medium-600) !important;
+  border-radius: 4px;
+}
+.summary-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--hr-neutral-dark-1000);
+}
+.line {
+  text-decoration: underline;
+}
+.text-line-through {
+  text-decoration: line-through;
+}

@@ -1,0 +1,11 @@
+
+    <aside aria-label="Language list">
+      <p-dropdown
+        [(ngModel)]="currentLanguage"
+        [options]="supportedLanguages"
+        optionLabel="name"
+        optionValue="key"
+        (onChange)="changLanguage($event)"
+      >
+      </p-dropdown>
+    </aside>

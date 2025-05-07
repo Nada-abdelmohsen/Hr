@@ -1,0 +1,215 @@
+@use '../utilities/typography';
+@import '../utilities/mixins';
+
+hr-text-area,
+hr-text-field {
+  width: 100%;
+  &.ng-touched.ng-invalid {
+    .input-field-wrapper {
+      &::after {
+        border-bottom-color: var(--hr-error-medium-700);
+      }
+
+      .p-inputtext,
+      .input-with-extension {
+        border-color: var(--hr-error-medium-700);
+
+        &:hover {
+          border-color: var(--hr-error-medium-700);
+        }
+      }
+
+      .hr-text-area {
+        border-color: var(--hr-error-medium-700);
+
+        &:hover {
+          border-color: var(--hr-error-medium-700);
+        }
+      }
+    }
+  }
+}
+
+.input-field-wrapper {
+  position: relative;
+  // text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  width: 100%;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    border-bottom: var(--border-radius-xs) solid var(--hr-neutral-dark-950);
+    clip-path: inset(0 round 4px);
+
+    opacity: 0;
+    transform: scaleX(0.25);
+    transform-origin: 50%;
+
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s;
+  }
+
+  &:focus-within::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  &:has(input:active) {
+    &::after {
+      transform: scaleX(0.3);
+    }
+  }
+  & label {
+    @include typography.font-style('text-sm');
+    color: var(--hr-neutral-dark-850);
+
+    .label-required {
+      color: var(--hr-error-medium-700);
+      margin-inline-end: 0.25rem;
+    }
+  }
+
+  p-inputnumber,
+  .p-inputnumber {
+    width: 100%;
+  }
+}
+
+@mixin base-input($isWrapper: false) {
+  $box-shadow: 0px 4px 8px -2px #1018281a;
+  $color: var(--hr-neutral-medium-400);
+
+  border: 0.063rem solid $color;
+  border-radius: var(--border-radius-sm);
+
+  &:hover {
+    border-color: var(--hr-neutral-medium-700);
+    color: var(--hr-neutral-dark-850);
+  }
+
+  @if $isWrapper {
+    &:focus-within {
+      box-shadow: $box-shadow;
+    }
+
+    &:has(:disabled) {
+      color: $color;
+      border-color: $color;
+    }
+  } @else {
+    &:focus {
+      box-shadow: $box-shadow;
+    }
+
+    &:disabled {
+      color: var(--hr-neutral-medium-500);
+      border-color: var(--hr-neutral-medium-500);
+    }
+  }
+}
+
+input.p-inputtext {
+  padding: 0.45rem 1rem;
+  background-color: transparent;
+  color: var(--hr-neutral-medium-700);
+  font-size: 1rem;
+  box-shadow: none;
+  width: 100%;
+  @include base-input();
+
+  @include tablet {
+    font-size: 14px;
+    padding-top: 0.475rem;
+    padding-bottom: 0.475rem;
+  }
+
+  &::placeholder {
+    color: var(--hr-neutral-medium-500);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.p-icon-field-left .p-input-icon:first-of-type,
+.p-icon-field-right .p-input-icon:first-of-type {
+  color: var(--hr-neutral-dark-850);
+}
+
+.p-inputgroup-addon {
+  padding: 0;
+
+  &:last-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.input-with-extension {
+  overflow: hidden;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  @include base-input(true);
+
+  .p-inputtext {
+    border: unset;
+  }
+
+  .input-extension {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    pointer-events: none;
+    user-select: none;
+    &:not(.bg-transparent) {
+      background-color: var(--hr-neutral-light-50);
+    }
+  }
+}
+
+.form-field-error {
+  color: var(--hr-error-medium-700);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p-icon-field-right > .p-inputtext {
+  padding-right: 2.5rem !important;
+}
+.p-icon-field-left > .p-inputtext {
+  padding-left: 2.5rem !important;
+}
+
+.ltr-field {
+  input,
+  .input-with-extension {
+    direction: ltr;
+  }
+}
+
+.field-errors {
+  .field-error {
+    color: var(--hr-error-medium-700);
+  }
+}

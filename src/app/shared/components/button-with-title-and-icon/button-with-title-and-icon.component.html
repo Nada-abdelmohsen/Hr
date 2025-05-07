@@ -1,0 +1,12 @@
+<div
+  class="export-btn-class border-round flex flex-row align-items-center justify-content-center"
+  [ngClass]="buttonClasses()"
+  (click)="onButtonClicked()"
+>
+  @if (iconClasses()) {
+    <span [ngClass]="iconClasses()"></span>
+  }
+  @if (titleClass()) {
+    <span *ngIf="buttonTitle()" [ngClass]="titleClass()">{{ buttonTitle() }}</span>
+  }
+</div>

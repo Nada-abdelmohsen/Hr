@@ -1,0 +1,17 @@
+.review-status {
+    border: 1px solid var(--hr-info-light-200);
+    background-color: var(--hr-info-light-75);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 3px 5px;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: fit-content;
+    p {
+      color: var(--hr-info-dark-800);
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 14px;
+    }
+  }

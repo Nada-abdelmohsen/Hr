@@ -1,0 +1,16 @@
+.p-inputswitch {
+  &:hover {
+    .p-inputswitch-slider:hover {
+      outline: 5px solid var(--hr-neutral-light-200);
+    }
+  }
+  &.p-inputswitch-checked .p-inputswitch-slider {
+    background: var(--hr-success-medium-700);
+    &:hover {
+      background: var(--hr-success-dark-900);
+    }
+  }
+  &.p-focus .p-inputswitch-slider {
+    box-shadow: none;
+  }
+}

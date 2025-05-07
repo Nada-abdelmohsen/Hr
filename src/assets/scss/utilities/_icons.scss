@@ -1,0 +1,35 @@
+.c-icons {
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.approved-icon {
+  background-image: url('/assets/icons/checkmark-square-02.svg');
+}
+
+.rejected-icon {
+  background-image: url('/assets/icons/reject-square.svg');
+}
+
+.send-back-icon {
+  background-image: url('../../images/icons/send-back.svg');
+}
+
+.id-verified-icon {
+  background-image: url('../../images/icons/id-verified.svg');
+}
+
+.edit-pin-icon {
+  background-image: url('../../images/icons/edit-pin.svg');
+}
+
+.inquiry-icon {
+  background-image: url('../../images/icons/inquiry.svg');
+}
+
+.info-icon {
+  background-image: url('../../images/icons/info-icon.svg');
+}

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'hr-icons';
+    src:  url('../../fonts/hr-icons/hr-icons.eot?j8jd3z');
+    src:  url('../../fonts/hr-icons/hr-icons.eot?j8jd3z#iefix') format('embedded-opentype'),
+      url('../../fonts/hr-icons/hr-icons.ttf?j8jd3z') format('truetype'),
+      url('../../fonts/hr-icons/hr-icons.woff?j8jd3z') format('woff'),
+      url('../../fonts/hr-icons/hr-icons.svg?j8jd3z#hr-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="hr-icon-"], [class*=" hr-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'hr-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.hr-icon-linkedin:before {
+  content: "\e91b";
+}
+.hr-icon-youtube:before {
+  content: "\e91c";
+}
+.hr-icon-x:before {
+  content: "\e91d";
+}
+.hr-icon-whatsapp:before {
+  content: "\e928";
+}
+.hr-icon-establishment:before {
+  content: "\e92a";
+}
+.hr-icon-delegation-type:before {
+  content: "\e923";
+}
+.hr-icon-calender:before {
+  content: "\e924";
+}
+.hr-icon-checklist:before {
+  content: "\e925";
+}
+.hr-icon-i_card:before {
+  content: "\e926";
+}
+.hr-icon-user:before {
+  content: "\e927";
+}
+.hr-icon-data:before {
+  content: "\e920";
+}
+.hr-icon-center:before {
+  content: "\e921";
+}
+.hr-icon-online-services:before {
+  content: "\e922";
+}
+.hr-icon-external-link:before {
+  content: "\e91f";
+}
+.hr-icon-calendar:before {
+  content: "\e91a";
+}
+.hr-icon-governance:before {
+  content: "\e917";
+}
+.hr-icon-volunteer:before {
+  content: "\e918";
+}
+.hr-icon-donation:before {
+  content: "\e919";
+}
+.hr-icon-download:before {
+  content: "\e913";
+}
+.hr-icon-delete-02-2:before {
+  content: "\e914";
+}
+.hr-icon-file-upload:before {
+  content: "\e915";
+}
+.hr-icon-check-solid:before {
+  content: "\e916";
+}
+.hr-icon-info:before {
+  content: "\e912";
+}
+.hr-icon-decline:before {
+  content: "\e909";
+}
+.hr-icon-approve:before {
+  content: "\e911";
+}
+.hr-icon-disable:before {
+  content: "\e900";
+}
+.hr-icon-check:before {
+  content: "\e901";
+}
+.hr-icon-assign-role:before {
+  content: "\e902";
+}
+.hr-icon-view:before {
+  content: "\e903";
+}
+.hr-icon-user-group:before {
+  content: "\e904";
+}
+.hr-icon-approved-request:before {
+  content: "\e905";
+}
+.hr-icon-octagon:before {
+  content: "\e906";
+}
+.hr-icon-gear:before {
+  content: "\e907";
+}
+.hr-icon-self-services:before {
+  content: "\e908";
+}
+.hr-icon-user-settings:before {
+  content: "\e90a";
+}
+.hr-icon-user-info:before {
+  content: "\e90b";
+}
+.hr-icon-building:before {
+  content: "\e90c";
+}
+.hr-icon-dashboard:before {
+  content: "\e90d";
+}
+.hr-icon-send-request:before {
+  content: "\e90e";
+}
+.hr-icon-withdraw:before {
+  content: "\e90f";
+}
+.hr-icon-requests:before {
+  content: "\e910";
+}

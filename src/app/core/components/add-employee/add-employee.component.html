@@ -1,0 +1,33 @@
+<form [formGroup]="addEmpForm" (ngSubmit)="addEmployee()">
+
+  <hr-text-field
+    [placeholder]="'example@gmail.com'"
+    [label]="'First Name'"
+    formControlName="firstName"
+
+  />
+
+  <hr-text-field
+    [placeholder]="'example@gmail.com'"
+    [label]="'Last Name'"
+    formControlName="lastName"
+
+  />
+
+  <hr-text-field
+    [placeholder]="'example@gmail.com'"
+    [label]="'Email'"
+    formControlName="email"
+
+  />
+
+  <hr-text-field
+    [placeholder]="'....'"
+    [label]="'Password'"
+    formControlName="password"
+  />
+
+
+  <button pButton>Add Employee</button>
+
+</form>

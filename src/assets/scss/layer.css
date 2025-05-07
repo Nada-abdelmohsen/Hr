@@ -1,0 +1,4 @@
+/* Needs to be in a separate css file because angular removes it inside scss files */
+/* https://github.com/primefaces/primeng/issues/13757#issuecomment-1763973731 */
+
+@layer base, primeng, hr;

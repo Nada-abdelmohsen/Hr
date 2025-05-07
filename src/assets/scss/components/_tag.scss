@@ -1,0 +1,30 @@
+@use '../utilities/typography';
+
+.p-tag {
+  @include typography.font-style('text-xs');
+  background: var(--hr-primary-light-50);
+  border: 1px solid var(--hr-primary-light-200);
+  color: var(--hr-primary-dark-800);
+
+  border-radius: 4px;
+
+  .pi-times-circle {
+    color: var(--hr-error-dark-800);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .p-tag-success {
+    background-color: var(--hr-info-light-50);
+    color: var(--hr-primary-dark-800);
+  }
+
+  .p-tag-danger {
+    background-color: var(--hr-error-light-25);
+    color: var(--hr-error-dark-800);
+  }
+
+  .p-tag-icon {
+    margin-inline-end: 8px;
+  }
+}

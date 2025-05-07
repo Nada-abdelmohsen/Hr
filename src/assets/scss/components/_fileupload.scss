@@ -1,0 +1,41 @@
+@use '../utilities/typography' as *;
+
+.fileupload-content,
+.uploaded-file {
+  background-color: var(--hr-neutral-light-50);
+
+  border: 1px solid var(--hr-neutral-medium-300);
+  border-style: dashed;
+  border-radius: 0.25rem;
+
+  .pi-file-arrow-up {
+    font-size: 1.5rem;
+  }
+  .pi-check-circle {
+    color: var(--hr-primary-medium-700);
+  }
+  .fielupload-text {
+    @include font-style('text-md');
+    font-weight: var(--hr-font-medium);
+    color: var(--hr-neutral-dark-800);
+  }
+  .fielupload-subtext {
+    @include font-style('text-xs');
+    color: var(--hr-neutral-medium-700);
+  }
+}
+
+.p-fileupload {
+  .p-fileupload-buttonbar,
+  .p-progressbar {
+    display: none;
+  }
+
+  .p-fileupload-content {
+    padding: 0;
+    border: none;
+  }
+}
+.attachment-preview {
+  object-fit: contain;
+}

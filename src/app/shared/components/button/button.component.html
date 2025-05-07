@@ -1,0 +1,24 @@
+<p-button
+  [label]="label"
+  [ngClass]="'hr-button hr-button--' + variant + ' hr-button--' + type"
+  [disabled]="disabled"
+  [iconPos]="iconPosition"
+  [loading]="loading"
+  (onClick)="buttonClick.emit($event)"
+  (onFocus)="buttonFocus.emit($event)"
+  (onBlur)="buttonBlur.emit($event)"
+  [styleClass]="styleClass"
+  [style]="style"
+  [attr.type]="buttonType"
+>
+  <ng-template pTemplate="icon">
+    @if (svgIcon || icon) {
+      @if (svgIcon) {
+        <hr-icon class=" {{ iconClass }} mx-2" [name]="svgIcon || ''"></hr-icon>
+      }
+      @if (icon) {
+        <i [ngClass]="icon ? 'pi ' + icon : undefined" class="{{ iconClass }}{{ orderClass }} "></i>
+      }
+    }
+  </ng-template>
+</p-button>

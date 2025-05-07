@@ -1,0 +1,30 @@
+.dynamic-p-accordion {
+  .p-accordion {
+    &-toggle-icon {
+      display: none;
+    }
+
+    .p-accordion-tab {
+      border-radius: 1rem;
+    }
+
+    .p-accordion-tab.p-accordion-tab-active {
+      .p-accordion-header-link {
+        background-color: var(--hr-neutral-light-50);
+        border-bottom: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .p-accordion-content {
+        background-color: var(--hr-neutral-light-50);
+      }
+    }
+
+    &-header {
+      &-link {
+        background-color: white;
+        padding: 1rem;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -16,7 +17,32 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "paths": {
+      "@shared/*": ["src/app/shared/*"],
+      "@core/*": ["src/app/core/*"],
+      "@components/*": ["src/app/shared/components/*"],
+      "@directives/*": ["src/app/shared/directives/*"],
+      "@enums/*": ["src/app/shared/enums/*"],
+      "@functions/*": ["src/app/shared/functions/*"],
+      "@models/*": ["src/app/shared/models/*"],
+      "@pipes/*": ["src/app/shared/pipes/*"],
+      "@services/*": ["src/app/shared/services/*"],
+      "@sub-feature/*": ["src/app/shared/sub-feature/*"],
+      "@utlities/*": ["src/app/shared/utlities/*"],
+      "@interceptors/*": ["src/app/core/interceptors/*"],
+      "@urls/*": ["src/app/core/urls/*"],
+      "@core-services/*": ["src/app/core/services/*"],
+      "@core-models/*": ["src/app/core/models/*"],
+      "@features/*": ["src/app/features/*"],
+      "@assets/*": ["src/assets/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@scss/*": ["src/assets/scss/*"]
+  },
+    "lib": ["ES2022", "dom"],
+    "resolveJsonModule": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,98 @@
+@use 'variables' as vars; // Import your variables
+
+:root {
+  @each $name, $color in vars.$colors {
+    --#{$name}: #{$color};  // Dynamically create --black, --white, etc.
+  }
+}
+@import 'mixins';
+
+.bg-success-medium-700 {
+  background-color: var(--hr-success-medium-700);
+}
+
+.text-success-medium-700 {
+  color: var(--hr-success-medium-700) !important;
+}
+
+.text-primary-dark-800 {
+  color: var(--hr-primary-dark-800) !important;
+}
+
+.text-neutral-medium-700 {
+  color: var(--hr-neutral-medium-700) !important;
+}
+
+.hr-neutral-dark-1000 {
+  color: var(--hr-neutral-dark-1000) !important;
+}
+
+.text-hr-neutral-light-50 {
+  color: var(--hr-neutral-light-50) !important;
+}
+
+.bg-hr-neutral-light-50 {
+  background-color: var(--hr-neutral-light-50) !important;
+}
+
+.text-hr-neutral-dark-850 {
+  color: var(--hr-neutral-dark-850) !important;
+}
+
+.bg-hr-neutral-dark-850 {
+  background-color: var(--hr-neutral-dark-850) !important;
+}
+
+.text-hr-neutral-dark-800 {
+  color: var(--hr-neutral-dark-800) !important;
+}
+
+.bg-hr-neutral-dark-800 {
+  background-color: var(--hr-neutral-dark-800) !important;
+}
+
+@for $i from 1 through 5 {
+  .trim-lines-#{$i} {
+    @include trim($i);
+  }
+}
+
+@for $i from 9 through 40 {
+  .font-size-#{$i} {
+    font-size: $i*1px !important;
+  }
+}
+
+
+.card-classes {
+  border: 1px solid #D2D6DB;
+  background-color: #F9FAFB;
+}
+
+.border-light-gray {
+  border: 1px solid #D2D6DB;
+}
+
+.tag-border-color {
+  border: 1px solid #B2DDFF;
+}
+
+
+.ltr-text {
+  unicode-bidi: embed;
+  direction: ltr;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.video {
+  img {
+    width: 100%;
+  }
+}

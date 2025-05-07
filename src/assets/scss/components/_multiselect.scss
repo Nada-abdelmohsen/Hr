@@ -1,0 +1,96 @@
+@use '../utilities/typography';
+
+$border-radius: 4px;
+
+hr-multiselect.ng-touched.ng-invalid {
+  .hr-multiselect-component .hr-multiselect-container {
+    &::after {
+      border-bottom-color: var(--hr-error-medium-700);
+    }
+    .p-multiselect {
+      border-color: var(--hr-error-medium-700);
+    }
+  }
+}
+
+.hr-multiselect-component {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .hr-multiselect-label {
+    @include typography.font-style('text-sm');
+    color: var(--hr-neutral-dark-850);
+    .label-required {
+      color: var(--hr-error-medium-700);
+      margin-inline-end: 0.25rem;
+    }
+  }
+}
+
+.hr-helper-text-container {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--hr-neutral-medium-700);
+  .hr-helper-text {
+    @include typography.font-style('text-sm');
+  }
+  .hr-helper-text-icon {
+    .pi {
+      font-size: 1rem;
+    }
+  }
+}
+
+.hr-multiselect-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    border-bottom: var(--border-radius-xs) solid var(--hr-neutral-dark-950);
+    clip-path: inset(0 round $border-radius);
+
+    opacity: 0;
+    transform: scaleX(0.25);
+    transform-origin: 50%;
+
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s;
+  }
+  &:focus-within::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  &:active::after {
+    transform: scaleX(0.3);
+  }
+}
+
+.p-multiselect {
+  width: 100%;
+  .p-multiselect-panel li {
+    padding: 16px;
+    margin-inline: 0;
+  }
+  .p-multiselect-header {
+    justify-content: start;
+    padding: 16px;
+  }
+  .p-multiselect-close {
+    display: none;
+  }
+  .p-inputtext {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
